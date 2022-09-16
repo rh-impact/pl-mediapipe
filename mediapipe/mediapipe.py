@@ -13,14 +13,14 @@ from chrisapp.base import ChrisApp
 # import cv2
 import mediapipe as mp
 import urllib.request
-# import numpy as np
+import numpy as np
 import pickle
-# import matplotlib as mpl
-# import matplotlib.pyplot as plt
-# from matplotlib import animation
-# import PyQt5
-# from PIL import Image
-# from IPython.display import Video
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from matplotlib import animation
+import PyQt5
+from PIL import Image
+from IPython.display import Video
 # import nb_helpers
 
 # mp_drawing = mp.solutions.drawing_utils
@@ -143,8 +143,15 @@ class Mediapipe(ChrisApp):
     #    print("copying %s to %s" %(options.inputdir, options.outputdir))
     #    copy_tree(options.inputdir, options.outputdir)
 
-        face_url = "/home/olakra/pl-mediapipe/in"
-        urllib.request.urlretrieve(face_url, "0004-1.3.12.2.1107.5.2.19.45152.2013030808110256555586033.jpeg")
+        # face_url = "/home/olakra/pl-mediapipe/in/0004-1.3.12.2.1107.5.2.19.45152.2013030808110256555586033.jpeg"
+        # urllib.request.urlretrieve(face_url, "brain_image.jpeg")
 
-        img = Image.open('brain_image.jpeg')
-        display(img)
+        im = Image.open('in/pexels-pixabay-462118.jpg')
+        im.show()
+
+
+    def show_man_page(self):
+        """
+        Print the app's man page.
+        """
+        print(Gstr_synopsis)
