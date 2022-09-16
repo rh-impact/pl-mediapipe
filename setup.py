@@ -1,31 +1,27 @@
+from os import path
 from setuptools import setup
 
+with open(path.join(path.dirname(path.abspath(__file__)), 'README.rst')) as f:
+    readme = f.read()
+
 setup(
-    name='chris-plugin-template',
-    version='1.0.0',
-    description='A ChRIS DS plugin template',
-    author='FNNDSC',
-    author_email='dev@babyMRI.org',
-    url='https://github.com/FNNDSC/python-chrisapp-template',
-    py_modules=['app'],
-    install_requires=['chris_plugin'],
-    license='MIT',
-    entry_points={
+    name             = 'mediapipe',
+    version          = '0.1',
+    description      = 'An app to track brain scans with most movement',
+    long_description = readme,
+    author           = 'olivelakra',
+    author_email     = 'olakra@redhat.com',
+    url              = 'http://wiki',
+    packages         = ['mediapipe'],
+    install_requires = ['chrisapp'],
+    test_suite       = 'nose.collector',
+    tests_require    = ['nose'],
+    license          = 'MIT',
+    zip_safe         = False,
+    python_requires  = '>=3.6',
+    entry_points     = {
         'console_scripts': [
-            'commandname = app:main'
-        ]
-    },
-    classifiers=[
-        'License :: OSI Approved :: MIT License',
-        'Topic :: Scientific/Engineering',
-        'Topic :: Scientific/Engineering :: Bio-Informatics',
-        'Topic :: Scientific/Engineering :: Medical Science Apps.'
-    ],
-    extras_require={
-        'none': [],
-        'dev': [
-            'pytest~=7.1',
-            'pytest-mock~=3.8'
-        ]
-    }
+            'mediapipe = mediapipe.__main__:main'
+            ]
+        }
 )
