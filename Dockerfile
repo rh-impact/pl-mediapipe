@@ -31,7 +31,5 @@ RUN pip install -r requirements.txt
 
 COPY . .
 RUN pip install .
-RUN apt-get -y update
-RUN apt-get -y install mediapipe
 
 CMD ["mediapipe", "--help"]
