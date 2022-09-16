@@ -1,5 +1,3 @@
-<!-- BEGIN README TEMPLATE
-
 # ChRIS MediaPipe Plugin Title
 
 [![Version](https://img.shields.io/docker/v/fnndsc/pl-appname?sort=semver)](https://hub.docker.com/r/fnndsc/pl-appname)
@@ -108,5 +106,3 @@ to produce a JSON description of this plugin, which can be uploaded to a _ChRIS 
 ```shell
 docker run --rm localhost/fnndsc/pl-mediapipe:dev chris_plugin_info > chris_plugin_info.json
 ```
-
-END README TEMPLATE -->
